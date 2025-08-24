@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Adventure - Fun Learning Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Cover Screen -->
+        <div class="cover-screen" id="coverScreen">
+            <div class="cover-background">
+                <img src="images/cover.png" alt="Game Cover" class="cover-fullscreen">
+            </div>
+            <button class="start-button" onclick="startGame()">
+                <span class="button-text">Start Game</span>
+            </button>
+        </div>
+        
+        <!-- Game Screen (hidden initially) -->
+        <div class="game-screen" id="gameScreen" style="display: none;">
+            <div class="game-background">
+                <img src="images/maths.png" alt="Game Background" class="background-fullscreen">
+            </div>
+            <div class="game-content-overlay">
+                <div class="game-header">
+                    <button class="back-button" onclick="backToCover()">← Back</button>
+                    <h2>Choose Your Challenge</h2>
+                </div>
+                <div class="game-options">
+                    <button class="option-btn addition" onclick="startAddition()">
+                        <span class="option-icon">➕</span>
+                        <span class="option-text">Addition</span>
+                    </button>
+                    <button class="option-btn subtraction" onclick="startSubtraction()">
+                        <span class="option-icon">➖</span>
+                        <span class="option-text">Subtraction</span>
+                    </button>
+                    <button class="option-btn mixed" onclick="startMixed()">
+                        <span class="option-icon">🔄</span>
+                        <span class="option-text">Mixed Practice</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
